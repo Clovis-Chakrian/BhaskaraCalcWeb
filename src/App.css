@@ -1,38 +1,83 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 .App {
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #004AAD;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .top-bar {
+  width: 100vw;
+  height: 80px;
+  display: flex;
+  box-shadow: 5px 4px 16px -6px #000000;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App .top-bar .title {
+  color: #FFF;
+  margin-left: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.App main {
+  margin-top: 80px;
+}
+
+.App main form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App main .labels {
+  color: #FFF;
+  font-size: 16px;
+  margin-bottom: 5px;
+  margin-right: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App main .default-input {
+  border-radius: 5px;
+  height: 30px;
+  width: 210px;;
+  border-width: 0.5px;
+  border-color: #FFF;
+  background-color: rgba(0, 0, 0, 0);
+  color: #FFF;
+  margin-bottom: 15px;
+  appearance: textfield;
+
+}
+
+.App main .default-input::placeholder {
+  color: rgb(211, 206, 206);
+}
+
+.App main #button-calc {
+  width: 100px;
+  height: 30px;
+  color: #FFF;
+  background-color: green;
+  border-radius: 5px;
+  border-width: 0px;
+}
+
+.App main #result {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.App main #result .x {
+  font-size: 20px;
+  color: #FFF;
+  font-weight: bold;
 }
